@@ -42,7 +42,7 @@ class MovieController extends Controller
         // $movie->title = $data['title'];
         // $movie->overview = $data['overview'];
         $movie->fill($data);
-        $slug = Str::slug($movie->title, '-');
+        // $slug = Str::slug($movie->title, '-');
         // $movie->slug=$slug;
         $movie->save();
         return redirect()->route('movies.show', $movie->id);
