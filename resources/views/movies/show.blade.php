@@ -10,9 +10,21 @@
         <div class="card">
             <h5 class="card-header">{{$movie->title}}</h5>
             <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-fluid" src="{{$movie->poster_path}}" alt="{{$movie->title}}">
+                    </div>
+                    <div class="col-10">
+                        <p class="card-text mb-5">{{$movie->overview}}</p>
+
+                        <h6 class="mb-5">{{$movie->genres}}</h6>
+                        <p>Release date: {{$movie->date_release}}</p>
+                    </div>
+
+                </div>
               
-              <p class="card-text">{{$movie->overview}}</p>
-              <a href="{{route('movies.index')}}" class="btn btn-primary">Back</a>
+            
+              <a href="{{route('movies.index')}}" class="btn btn-primary mt-5">Back</a>
             </div>
           </div>
 
